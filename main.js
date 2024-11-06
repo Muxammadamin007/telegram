@@ -14,6 +14,8 @@ let myChat = document.getElementById('chat');
 let mySidenav = document.getElementById('side');
 let main = document.getElementById('main');
 
+let img2= document.getElementById('img2');
+
 let myCleaner = document.getElementById('clean');
 
 let mySearcher = document.getElementById('searcher');
@@ -21,6 +23,77 @@ let myBack = document.getElementById('back');
 let mySearchInput = document.getElementById('searchInput');
 let myList = document.getElementById('list');
 let mySubmit = document.getElementById('submit');
+
+
+
+
+
+let settings = document.getElementById('settings');
+
+let password = document.getElementById('password');
+
+let pas1 = document.getElementById('pas1');
+let pas2 = document.getElementById('pas2');
+
+let ready = document.getElementById('ready');
+let last = document.getElementById('last');
+
+
+let storedPassword = '1111'
+
+settings.addEventListener('click',()=>{
+    password.style.display = 'flex';
+    ready.style.display = 'block';
+    settings.style.display = 'none';
+})
+
+
+last.addEventListener('click',()=>{
+    password.style.display = 'none';
+    ready.style.display = 'none';
+    settings.style.display = 'block';
+});
+
+ready.addEventListener('click',()=>{
+    // let pas1Value = pas1.value
+    // let pas2Value = pas2.value
+    if(pas1.value === pas2.value){
+        alert('Passwords are the same')
+        storedPassword = pas2.value
+        password.style.display = 'none';
+
+    }else{
+        alert('Passwords are not the same')
+        pas1.value = ''
+        pas2.value = ''
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 mySubmit.addEventListener('click', () => {
@@ -131,26 +204,19 @@ function add(event) {
 
     }
 
-
-    if ((myInput.value.length == 4) && (myInput.value == "1111")) {
-
-        myLocker.style.display = "none";
-        myNav.style.display = 'flex'
-        myPrivate.style.display = 'flex'
-        main.style.display = 'block';
-        myChat.style.display = "block";
-
+    if (myInput.value.length === 4) {
+        if (myInput.value === storedPassword) {
+            myLocker.style.display = "none";
+            myNav.style.display = 'flex';
+            myPrivate.style.display = 'flex';
+            main.style.display = 'block';
+            myChat.style.display = "block";
+        } else {
+            alert("Please enter a valid password");
+            myInput.value = "";  // Clear after invalid password
+        }
     } else if (myInput.value.length > 4) {
-        myInput.value = ""
-
-
-    } else if ((myInput.value.length == 4) && !(myInput.value == "1111")) {
-        alert("Please enter a valid password");
-    }
-
-    if (myInput.value == "") {
-        myH2.style.display = "block";
-        myP.style.display = "block";
+        myInput.value = "";  // Reset after too many characters
     }
 
 

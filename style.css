@@ -194,10 +194,11 @@ body{
 
 .main{
     background-color: rgb(87, 87, 87);
-    height: 13vh;
+    height: 15vh;
     position: fixed;
     width: 100%;
     z-index: 2;
+
 
 }
 
@@ -220,7 +221,7 @@ body{
     width: 100%;
     height: 100vh;
     top: 60px;
-    min-height: 87vh;
+    min-height: 85vh;
     position: absolute;
     overflow-y: auto;
     transform: translateY(6.1%);
@@ -428,4 +429,51 @@ div:hover{
 }
 .aside div:nth-child(11){
     border-bottom: 1px solid #000000 ;
+}
+
+
+
+
+
+
+
+
+
+.password{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: grey;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10%;
+    align-items: center;
+    font-family: sans-serif;
+    display: none;
+    input{
+        width: 180%;
+        margin-left: -40%;
+        outline: none;
+        height: 4vh;
+        font-size: 15px;
+        text-indent: 15px;
+    }
+    legend{
+        color: #fff;
+        margin-left: -40%;
+    }
+
+    button{
+        padding: 10px 30px;
+        font-size: 20px;
+    }
+
+    #last{
+        position: absolute;
+        font-size: 30px;
+        top: 40px;
+        left: 40px;
+    }
 }
