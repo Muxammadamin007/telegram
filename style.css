@@ -346,11 +346,16 @@ body{
         justify-content: start;
         margin-left: 70px;
     }
-
-
+    
 }
-#side div:hover{
-    background-color: grey ;
+div:hover{
+    background-color: grey;
+    i{
+        color: black;
+    }
+    h1{
+        color: black;
+    }
 }
 
 #p1{
