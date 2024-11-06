@@ -44,7 +44,7 @@ let storedPassword = '1111'
 settings.addEventListener('click',()=>{
     password.style.display = 'flex';
     ready.style.display = 'block';
-    settings.style.display = 'none';
+    
 })
 
 
