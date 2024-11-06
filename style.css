@@ -472,6 +472,11 @@ div:hover{
         font-size: 15px;
         text-indent: 15px;
     }
+    input::placeholder{
+        color: black;
+        font-size: 15px;
+        
+    }
     legend{
         color: #fff;
         margin-left: -40%;

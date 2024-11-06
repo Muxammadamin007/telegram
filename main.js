@@ -57,20 +57,29 @@ last.addEventListener('click',()=>{
 ready.addEventListener('click',()=>{
     // let pas1Value = pas1.value
     // let pas2Value = pas2.value
-    if(pas1.value === pas2.value){
+    // pas1.value.length = 4;
+    // pas2.value.length = 4;
+    
+    // else if(!(pas1.value==Number)&&!(pas2.value==Number)){
+    //     alert('Password should only contain numbers')
+    //     pas1.value = ''
+    //     pas2.value = ''
+    // }
+    
+    if((pas1.value == pas2.value)&&(pas1.value.length <4)){
         alert('Passwords are the same')
         storedPassword = pas2.value
+        
         password.style.display = 'none';
-
-    }else{
+        
+    }   
+    else{
         alert('Passwords are not the same')
         pas1.value = ''
         pas2.value = ''
     }
 
 })
-
-
 
 
 
