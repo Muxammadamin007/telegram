@@ -66,12 +66,14 @@ ready.addEventListener('click',()=>{
     //     pas2.value = ''
     // }
     
-    if((pas1.value == pas2.value)&&(pas1.value.length <4)){
+    if((pas1.value == pas2.value)&&(pas1.value.length <=4)){
         alert('Passwords are the same')
         storedPassword = pas2.value
         
         password.style.display = 'none';
         
+        pas1.value = ''
+        pas2.value = ''
     }   
     else{
         alert('Passwords are not the same')
