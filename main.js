@@ -16,6 +16,24 @@ let mySidenav = document.getElementById('side');
 let main = document.getElementById('main');
 let myCleaner = document.getElementById('clean');
 
+let mySearcher = document.getElementById('searcher');
+let myBack = document.getElementById('back');
+let mySearchInput = document.getElementById('searchInput');
+let myList = document.getElementById('list');
+let mySubmit =document.getElementById('submit');
+
+
+mySubmit.addEventListener('click', () => {
+    let searched = mySearchInput.value;  // Get the value on each click
+    let myCreatedDiv = document.createElement('div');
+    let myCreatedH1 = document.createElement('h1');
+    myCreatedH1.innerText = searched;
+    myCreatedDiv.appendChild(myCreatedH1);
+    myList.appendChild(myCreatedDiv);  // Append to the body or any other container
+    mySearchInput.value = '';
+});
+
+mySearcher.style.display='none'
 myChat.style.display="none";
 main.style.display="none";
 unLocked.addEventListener('click',() => {
@@ -26,7 +44,14 @@ unLocked.addEventListener('click',() => {
         myChat.style.display='none';
         main.style.display='none';
 })
+search.addEventListener('click',() => {
+    mySearcher.style.display='block';
+})
 
+myBack.addEventListener('click',() => {
+    mySearcher.style.display='none';
+
+})
 menu.addEventListener('click',()=>{
     mySidenav.style.display="block";
     myCleaner.style.display="block";

@@ -166,7 +166,7 @@ body{
 .private{
     padding: 0 5x;
     display: grid;
-    
+    position: fixed;
     grid-template-columns: 13% 13% 13% 13% 13% 13% 13% ;
     color: grey;
     margin-top: 10%;
@@ -197,18 +197,34 @@ body{
     height: 13vh;
     position: fixed;
     width: 100%;
+    z-index: 2;
+
+}
+
+
+#submit{
+    position: absolute;
+    right: 0px;
+    color: #fff;
+    width: 15%;
+    height: 4%;
+    font-size: 17px;
+    border: 2px solid rgb(231, 231, 231);
 }
 
 .chats{
-    display: flex;
-    flex-direction: column;
+
+    /* display: flex;
+    flex-direction: column; */
     background-color: rgb(143, 143, 143);
     width: 100%;
-    height: auto;
+    height: 100vh;
+    top: 60px;
     min-height: 87vh;
     position: absolute;
     overflow-y: auto;
     transform: translateY(6.1%);
+    z-index: 0;
     div{
         height: 10vh;
         border: 2px solid rgb(0, 0, 0);
@@ -231,10 +247,11 @@ body{
     position: absolute;
     top: 0px;
     overflow-y: auto;
+    z-index: 3;
     div{
         height: 7vh;
         width: 90%;
-        border: 2px solid white;
+        border: 2px solid rgba(255, 255, 255, 0);
     }
 }
 .clean{
@@ -246,4 +263,164 @@ body{
     right: 0px;
     border: none;
     
+}
+
+
+.search{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(132, 132, 132);
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    position: fixed;
+    display: none;
+    button{
+        width: 10%;
+        height: 5vh;
+        margin: 10px 10px;
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        
+    }
+    input{
+        width: 70%;
+        height: 4vh;
+        position: absolute;
+        top: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        font-size: 20px;
+        color: white;
+        outline: none;
+    }
+    input::placeholder{
+        color: #fff;
+    }
+    
+    .list{
+        background-color: black;
+        width: 100%;
+        height: 90vh;
+        overflow-y: auto;
+        div{
+            width: 100%;
+            height: 10vh;
+            border: 2px solid white;
+            font-family: sans-serif;
+            h1{
+                color: #fff;
+            }
+        }
+        
+    }
+}
+
+.chats div:hover{
+    background-color: grey;
+}
+
+.aside{
+    div{
+        width: 100%;
+        i{
+            font-size: 25px;
+        margin-left: 15px;
+        margin-top: 15px;
+        position: absolute;
+        color: rgb(101, 101, 101);
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+    h1{
+        color: #fff;
+        font-family: sans-serif;
+        font-size: 17px;
+        display: flex;
+        margin-top: 20px;
+        font-weight: 400;
+        align-items: center;
+        justify-content: start;
+        margin-left: 70px;
+    }
+
+
+}
+#side div:hover{
+    background-color: grey ;
+}
+
+#p1{
+    color: rgb(176, 176, 176);
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+#p2{
+    font-family: sans-serif;
+    font-size: 13px;
+    color: rgb(176, 176, 176);
+    margin-bottom: 30px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile{
+    width: 100%;   
+    border: none;
+    height: 200px;
+    #i1{
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        position: relative;
+        filter: contrast(60%) grayscale(10);
+    }
+    
+    #i2{
+        width: 20%;
+        height: 25%;
+        position: relative;
+        top: -80%;
+        left: 15px;
+        background-size: 100% 100%;
+        border-radius: 50%;
+    }
+    h3{
+        position: absolute;
+        color: #fff;
+        font-family: cursive;
+        top: 15%;
+        margin-left: 10px;
+        font-weight: 400;
+        b{
+            color: rgb(255, 170, 0);
+        }
+        
+    }
+    p{
+        color: #c5c5c5;
+        position: absolute;
+        font-family: sans-serif;
+        font-size: 12px;
+        left: 10px;
+        top: 18%;
+    }
+}
+}
+
+.aside div:nth-child(3){
+    border-bottom: 1px solid #000000 ;
+}
+.aside div:nth-child(6){
+    border-bottom: 1px solid #000000 ;
+}
+.aside div:nth-child(11){
+    border-bottom: 1px solid #000000 ;
 }
