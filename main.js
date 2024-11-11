@@ -169,6 +169,7 @@ unLocked.addEventListener('click', () => {
     myPrivate.style.display = 'none'
     myChat.style.display = 'none';
     main.style.display = 'none';
+    mySidenav.style.display = "none";
 })
 search.addEventListener('click', () => {
     mySearcher.style.display = 'block';
